@@ -1,0 +1,37 @@
+[
+  {
+    "topic": "Hemodialysis and treatment sessions",
+    "content": "In-center hemodialysis uses a machine and filter to remove wastes and extra fluid from the blood. Treatment schedules and session length are prescribed for each person and can vary. The dialysis team can explain what to expect before, during, and after a session. This general information cannot determine an individual's treatment needs.",
+    "source": "NIDDK, Hemodialysis, https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis (accessed 2026-11-14)"
+  },
+  {
+    "topic": "Dialysis access",
+    "content": "Hemodialysis access may be an arteriovenous fistula, graft, or catheter. Each access type needs care guidance from the dialysis team. Follow the team's instructions and contact them if the access looks red, swollen, painful, warm, or has drainage, or if you are concerned it has changed. Bleeding from a fistula that will not stop is an emergency; call local emergency services. Do not rely on a chatbot to assess access problems.",
+    "source": "NIDDK, Hemodialysis, https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis; NHS, Complications of dialysis, https://www.nhs.uk/tests-and-treatments/dialysis/complications/ (accessed 2026-11-14)"
+  },
+  {
+    "topic": "Food and fluids",
+    "content": "People receiving hemodialysis may need individualized guidance about sodium, phosphorus, potassium, protein, and fluid intake. Needs vary with treatment, lab results, health, and medicines. NIDDK recommends working with the dialysis center's dietitian to develop a meal plan. Lifeline must not calculate a personal fluid allowance, recommend a diet, or tell someone to change intake; ask the dialysis care team or renal dietitian.",
+    "source": "NIDDK, Hemodialysis, https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis (accessed 2026-11-14)"
+  },
+  {
+    "topic": "Medicines and missed treatments",
+    "content": "Dialysis treatment schedules and medicines are part of an individual's care plan. This chatbot cannot advise a person to skip, delay, add, stop, or change a treatment or medicine. Contact the dialysis center or prescribing clinician promptly if a treatment is missed, a medicine dose is uncertain, or a schedule problem comes up. For severe or sudden symptoms, call local emergency services.",
+    "source": "Lifeline demo safety guidance; individual instructions must come from the patient's dialysis team."
+  },
+  {
+    "topic": "Daily life while receiving dialysis",
+    "content": "What is life like for a dialysis patient? Life with dialysis is different for each person. In-center hemodialysis takes time to fit into a weekly routine, and some people feel tired or need to rest for several hours after a treatment. Work, home responsibilities, travel, food, and fluid routines may need adjustments. These changes can be hard for patients and families. A dialysis social worker or counselor can help people talk through practical or emotional concerns. Ask your own dialysis team how your treatment schedule may affect your day-to-day life.",
+    "source": "NIDDK, Hemodialysis, https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis (accessed 2026-11-14)"
+  },
+  {
+    "topic": "Urgent symptoms",
+    "content": "Chest pain, severe trouble breathing, fainting, signs of stroke, or severe bleeding can require immediate emergency help. Call the local emergency number or go to an emergency department; do not wait for a chatbot response. For concerning but non-emergency symptoms or access-site changes, contact the dialysis team promptly and follow the instructions they provided. This demo uses 911 for the Philippines; confirm the correct local number before use.",
+    "source": "WHO, Emergency care, https://www.who.int/health-topics/emergency-care; NHS, Complications of dialysis, https://www.nhs.uk/tests-and-treatments/dialysis/complications/ (accessed 2026-11-14)"
+  },
+  {
+    "topic": "Emotional support and daily life",
+    "content": "Dialysis can affect routines, work, travel, relationships, and emotional well-being. People may want to talk with their dialysis nurse, social worker, counselor, family, or peers. Experiences differ, and a supportive conversation should not assume how someone feels or promise an outcome. This chatbot can listen and offer general information, but it is not a clinician or crisis service.",
+    "source": "NIDDK, Hemodialysis, https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis (accessed 2026-11-14); Lifeline demo scope note"
+  }
+]

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1266a8">
+  <title>{{ chatbot_name }} | Dialysis companion</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="{{ url_for('static', filename='chat.js') }}" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="{{ chatbot_name }} home">
+        <span class="brand-mark" aria-hidden="true"><span>+</span></span>
+        <span class="brand-copy">
+          <strong>{{ chatbot_name }}</strong>
+          <span>DIALYSIS CARE COMPANION</span>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <span class="privacy-label"><span class="status-dot"></span>Short chat memory · this tab</span>
+        <button class="text-button" id="new-chat" type="button" title="Clear this conversation">
+          <span aria-hidden="true">↻</span> Start fresh
+        </button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="guide-panel" aria-labelledby="guide-title">
+        <div class="guide-intro">
+          <span class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">✦</span> HERE WITH YOU</span>
+          <h1 id="guide-title">Care for your kidneys takes a team. This is a place to talk.</h1>
+          <p>Bring questions, worries, or just a need to pause. Lifeline can listen and share general, reviewed dialysis information.</p>
+          <div class="companion-note"><span class="note-icon" aria-hidden="true">♡</span><span>Take it one conversation at a time.</span></div>
+        </div>
+
+        <div class="topic-section">
+          <div class="section-heading">
+            <div><span class="eyebrow">EXPLORE A TOPIC</span><span class="section-caption">Choose a conversation starter</span></div>
+            <span class="topic-count">05</span>
+          </div>
+          <div class="topic-list">
+            <button class="topic-button" type="button" data-prompt="What is hemodialysis and what happens during a session?">
+              <span class="topic-icon" aria-hidden="true">◷</span>
+              <span class="topic-copy"><strong>Treatment day</strong><small>What to expect at a session</small></span>
+              <span class="topic-arrow" aria-hidden="true">›</span>
+            </button>
+            <button class="topic-button" type="button" data-prompt="Who is on a dialysis care team?">
+              <span class="topic-icon" aria-hidden="true">＋</span>
+              <span class="topic-copy"><strong>Your care team</strong><small>People who support your care</small></span>
+              <span class="topic-arrow" aria-hidden="true">›</span>
+            </button>
+            <button class="topic-button" type="button" data-prompt="What is life like for a dialysis patient?">
+              <span class="topic-icon" aria-hidden="true">⌂</span>
+              <span class="topic-copy"><strong>Life with dialysis</strong><small>Everyday routines and changes</small></span>
+              <span class="topic-arrow" aria-hidden="true">›</span>
+            </button>
+            <button class="topic-button" type="button" data-prompt="Why do food and fluid guidance vary for each person?">
+              <span class="topic-icon" aria-hidden="true">⌁</span>
+              <span class="topic-copy"><strong>Food &amp; fluids</strong><small>Why guidance is personal</small></span>
+              <span class="topic-arrow" aria-hidden="true">›</span>
+            </button>
+            <button class="topic-button" type="button" data-prompt="How do I care for my dialysis access?">
+              <span class="topic-icon" aria-hidden="true">♡</span>
+              <span class="topic-copy"><strong>Access care</strong><small>General information on access</small></span>
+              <span class="topic-arrow" aria-hidden="true">›</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="urgent-note">
+          <span class="urgent-mark" aria-hidden="true">!</span>
+          <div>
+            <strong>Need urgent help?</strong>
+            <p>For chest pain, trouble breathing, fainting, or bleeding that will not stop, call 911 now or go to the nearest emergency department.</p>
+          </div>
+        </div>
+        <p class="guide-footnote">Lifeline is a demo, not a dialysis center or emergency service. Avoid sharing identifying details.</p>
+      </aside>
+
+      <section class="chat-panel" aria-label="Chat with {{ chatbot_name }}">
+        <div class="chat-header">
+          <div class="chat-avatar" aria-hidden="true"><span>+</span></div>
+          <div class="chat-heading">
+            <strong>{{ chatbot_name }} <span class="chat-role">AI COMPANION</span></strong>
+            <span>General support for your dialysis journey</span>
+          </div>
+          <div class="assistant-state" id="assistant-state" aria-live="polite">
+            <span class="status-dot"></span><span>Ready</span>
+          </div>
+        </div>
+
+        <div class="messages" id="messages" role="log" aria-label="Conversation" aria-relevant="additions text">
+          <article class="message-row assistant-message" data-welcome>
+            <div class="message-avatar" aria-hidden="true">+</div>
+            <div class="message-stack">
+              <span class="message-sender">{{ chatbot_name }} <span>·</span> companion</span>
+              <div class="message-bubble">
+                <p>Hi, I’m {{ chatbot_name }}. Dialysis can bring a lot to manage, and I’m here to listen and share general, reviewed information.</p>
+                <p>I can’t assess symptoms or change your treatment, diet, fluid limit, or medicines. Your dialysis team is the best source for advice about your care. What would feel helpful to talk about today?</p>
+              </div>
+              <span class="message-time">Just now</span>
+            </div>
+          </article>
+        </div>
+
+        <form class="composer" id="chat-form">
+          <label class="sr-only" for="message-input">Your message</label>
+          <textarea id="message-input" name="message" rows="1" maxlength="2000" placeholder="Type what’s on your mind…" autocomplete="off" required></textarea>
+          <div class="composer-footer">
+            <span class="composer-hint"><span>Enter</span> to send <span class="hint-divider">·</span> Shift + Enter for a new line</span>
+            <div class="composer-actions">
+              <span class="character-count" id="character-count">0 / 2000</span>
+              <button class="send-button" id="send-button" type="submit" disabled>
+                <span>Send</span><span class="send-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <span><span class="footer-shield" aria-hidden="true">i</span> General education only · not medical advice</span>
+      <span>Lifeline <span class="footer-dot">·</span> a supportive dialysis companion</span>
+    </footer>
+  </div>
+</body>
+</html>
